@@ -18,10 +18,11 @@ package ast
 import (
 	"errors"
 	"fmt"
-	"github.com/awalterschulze/gographviz/token"
 	"math/rand"
 	"sort"
 	"strings"
+
+	"github.com/geotho/gographviz/token"
 )
 
 var (
@@ -421,6 +422,9 @@ func NewAttr(f, v Elem) (*Attr, error) {
 }
 
 func (this *Attr) String() string {
+	if this.Field.String() == "label" || this.Field.String() == "fillcolor" {
+		return this.Field.String() + `="` + this.Value.String() + `"`
+	}
 	return this.Field.String() + `=` + this.Value.String()
 }
 

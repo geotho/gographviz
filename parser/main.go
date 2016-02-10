@@ -17,9 +17,9 @@ package parser
 
 import (
 	"fmt"
-	"github.com/awalterschulze/gographviz/ast"
-	"github.com/awalterschulze/gographviz/scanner"
-	"github.com/awalterschulze/gographviz/token"
+	"github.com/geotho/gographviz/ast"
+	"github.com/geotho/gographviz/scanner"
+	"github.com/geotho/gographviz/token"
 	"io"
 	"io/ioutil"
 	"os"
